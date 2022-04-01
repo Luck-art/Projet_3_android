@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#B7F19999"
+        android:backgroundTint="#DDD1D1"
+        android:foregroundTint="#ECA4A4"
+        tools:context=".FocusNeighbourActivity">
+
+
+        <ImageView
+            android:id="@+id/avatarUser"
+            android:layout_width="0dp"
+            android:layout_height="299dp"
+            android:layout_marginBottom="498dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.666"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <ImageButton
+            android:id="@+id/comeBackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="14dp"
+            android:background="#00FFFFFF"
+            android:tint="#FAF6F6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="?attr/homeAsUpIndicator" />
+
+        <TextView
+            android:id="@+id/nameUserAvatar"
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="202dp"
+            android:text="TextView"
+            android:textColor="#FDFDFD"
+            android:textSize="25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/comeBackButton" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="19dp"
+            android:layout_marginEnd="9dp"
+            android:elevation="10dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/avatarUser"
+            tools:ignore="MissingConstraints"
+            tools:visibility="visible">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/constraintLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/nameUserContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="15dp"
+                    android:text="@string/textview"
+                    android:textSize="15dp"
+                    tools:ignore="Orientation"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="0dp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#aaaaaa"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/nameUserContainer"></View>
+
+                <ImageView
+                    android:id="@+id/mapIcon"
+                    android:layout_width="24dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="30dp"
+                    android:tint="#9F64ED"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/nameUserContainer"
+                    app:srcCompat="@drawable/ic_baseline_place_24" />
+
+                <TextView
+                    android:id="@+id/addressUser"
+                    android:layout_width="56dp"
+                    android:layout_height="19dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="30dp"
+                    android:text="TextView"
+                    app:layout_constraintStart_toEndOf="@+id/mapIcon"
+                    app:layout_constraintTop_toBottomOf="@+id/nameUserContainer" />
+
+                <ImageView
+                    android:id="@+id/phoneIcon"
+                    android:layout_width="23dp"
+                    android:layout_height="19dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="30dp"
+                    android:tint="#9F64ED"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mapIcon"
+                    app:srcCompat="@android:drawable/stat_sys_phone_call" />
+
+                <TextView
+                    android:id="@+id/phoneUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="30dp"
+                    android:text="TextView"
+                    app:layout_constraintStart_toEndOf="@+id/phoneIcon"
+                    app:layout_constraintTop_toBottomOf="@+id/addressUser" />
+
+                <ImageView
+                    android:id="@+id/fluxIcon"
+                    android:layout_width="24dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="15dp"
+                    android:tint="#9F64ED"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/phoneIcon"
+                    app:srcCompat="@drawable/world" />
+
+                <TextView
+                    android:id="@+id/fluxUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="30dp"
+                    android:text="TextView"
+                    app:layout_constraintStart_toEndOf="@+id/fluxIcon"
+                    app:layout_constraintTop_toBottomOf="@+id/phoneUser" />
+
+            </android.support.constraint.ConstraintLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="9dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView1">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/infoUser"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:text="A propos de moi"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:background="#aaaaaa"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/infoUser"></View>
+
+                <TextView
+                    android:id="@+id/descriptionUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="17dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="TextView"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            </android.support.constraint.ConstraintLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+        <ImageView
+            android:id="@+id/favorites"
+            android:background="@drawable/circle_white"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:clickable="true"
+            android:elevation="11dp"
+            android:padding="15dp"
+            app:backgroundTint="#FFFFFF"
+            app:layout_constraintBottom_toTopOf="@+id/cardView1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/avatarUser"
+            app:srcCompat="@drawable/star_no_favorites"
+            tools:ignore="MissingConstraints" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>
